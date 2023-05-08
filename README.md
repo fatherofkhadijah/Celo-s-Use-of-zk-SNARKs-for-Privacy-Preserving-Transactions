@@ -49,7 +49,7 @@ The use of zk-SNARKs on the Celo platform provides several benefits for users, i
 
 ## Example: How to Use zk-SNARKs for Privacy on Celo
 
-``` javascript
+```
 // Import the necessary Celo libraries and dependencies
 const celoSDK = require('celo-sdk');
 const Web3 = require('web3');
