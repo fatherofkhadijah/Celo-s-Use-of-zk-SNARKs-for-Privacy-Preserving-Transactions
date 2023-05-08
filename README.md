@@ -105,6 +105,48 @@ if (result) {
 ```
 
 ## Code Breakdown
+**The code uses several libraries to achieve this goal, including the Celo SDK, Web3, BigNumber, and snarkjs.**
+
+### Representation of each library in a json object with keys
+```json
+[
+  {
+    "Name": "celo-sdk",
+    "Importance": "High",
+    "Reason": "Used to interact with the Celo network and provide access to the Celo Provider API."
+  },
+  {
+    "Name": "Web3",
+    "Importance": "High",
+    "Reason": "Used to set up a connection to the Celo network and send transactions."
+  },
+  {
+    "Name": "BigNumber.js",
+    "Importance": "High",
+    "Reason": "Used to handle large numbers in JavaScript, specifically the amount to send in wei."
+  },
+  {
+    "Name": "snarkjs",
+    "Importance": "High",
+    "Reason": "Used to generate and verify zk-SNARK proofs for the transaction."
+  }
+]
+```
+### Write up Breakdown
+
+ - The first section of the code imports the necessary libraries using the require() function. These libraries include celo-sdk, Web3, BigNumber, and snarkjs. The celo-sdk library provides the necessary tools to interact with the Celo network, while Web3 is a popular JavaScript library for interacting with the Ethereum network. BigNumber is a library for handling large numbers, and snarkjs is a library for working with zk-SNARKs.
+ - After importing the necessary libraries, the code creates a connection to the Celo network by defining a new HTTP provider using the celoProvider variable. The provider URL is specified as an argument to the HttpProvider() constructor. The code then creates a new Web3 object using the provider.
+ - The next section of the code defines the sender and recipient addresses for the transaction. These addresses are specified as hexadecimal strings and assigned to the sender and recipient variables.
+ - The amount to send in wei is also defined in this section using the BigNumber library. The amount is specified as a string and assigned to the amount variable.
+ / You might be wondwering the use of the BigNumber/
+ well,
+ BigNumber is a JavaScript library that allows for arbitrary precision arithmetic, which means it can handle large or small numbers with a high degree of accuracy. In the case of cryptocurrency transactions, it is important to be able to accurately represent the value being sent, as even small discrepancies can result in significant losses.
+ - The code then defines the zk-SNARK parameters required to generate and verify the proof. The path to the circuit and proving key files are specified as strings and assigned to the circuit and provingKey variables, respectively.
+ - Next, the code loads the proving key and circuit from disk using the snarkjs library. The generateProof() function is used to load the proving key and circuit and generate a proof using the input variables sender, recipient, and amount. The vk and alpha variables are assigned the values returned by the generateProof() function.
+ - The code then generates a proof using zk-SNARKs that verifies the sender has the authority to make the transaction. This is achieved using the fullProve() function from the snarkjs library. The function takes several input variables, including the vk and alpha values, as well as the sender, recipient, and amount values. The proof is assigned to the proof variable.
+ - After generating the proof, the code verifies the proof using zk-SNARKs by calling the verify() function from the snarkjs library. The function takes the verifying key, proof.publicSignals, and proof.proof as inputs. The result of the verification is assigned to the result variable
+ - Finally, if the proof is valid, the code makes the transaction using the sendTransaction() function from Web3. The function takes several input variables, including the sender, recipient, and amount values. If the proof is invalid, an error message is displayed to the console. The transaction hash is printed to the console if the transaction is successful.
+
 
 
 ## Conclusion
