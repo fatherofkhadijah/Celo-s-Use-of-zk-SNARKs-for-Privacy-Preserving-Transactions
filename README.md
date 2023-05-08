@@ -1,12 +1,21 @@
 # Celo-s-Use-of-zk-SNARKs-for-Privacy-Preserving-Transactions
 
+# Table of content
+
+  - [introduction](#introduction)
+  - [What are zk-SNARKs](#what-are-zk-snarks)
+  - [How does Celo use zk-SNARKs](#how-does-celo-use-zk-snarks)
+  - [Benefits of zk-SNARKs on Celo](#benefits-of-zk-snarks-on-celo)
+  - [Example: How to Use zk-SNARKs for Privacy on Celo](#example-how-to-use-zk-snarks-for-privacy-on-celo)
+  - [Conclusion](#Conclusion)
+
 ### Introduction
 Celo is a blockchain platform that allows access to financial tools and services to anyone with a mobile phone. One of its key features is the use of zk-SNARKs for privacy-preserving transactions. This technology allows transactions to occur without revealing information about them, providing users with a high level of security and privacy.
 
-### What are zk-SNARKs?
+### What are zk-SNARKs
 Zero-Knowledge Succinct Non-Interactive Arguments of Knowledge (zk-SNARKs) are cryptographic proofs that allow one party to prove to another party that they know a particular piece of information without revealing the information itself. This is done in a secure and highly efficient way, providing privacy and security to users on the Celo platform.
 
-### How does Celo use zk-SNARKs?
+### How does Celo use zk-SNARKs
 Celo uses zk-SNARKs to enable privacy-preserving transactions on the platform. When a user makes a transaction on the Celo network, they create proof using zk-SNARKs that they have the authority to make the transaction. This proof is then verified by the network without revealing any information about the transaction itself.
 
 This provides several benefits for users on the Celo platform. First, it ensures that transactions are secure and cannot be tampered with by malicious actors. Second, it provides a high level of privacy for users, as their transaction details are not revealed to anyone else on the network.
